@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+// Init
+process.env.NODE_ENV = process.env.NODE_ENV || 'production';
+var forseSync = process.env.DB_FORCE_SYNC ? JSON.parse(process.env.DB_FORCE_SYNC) : false;
+
+/**
+ * Module dependencies.
+ */
+var app = require('./../app');
+var models = require('./../models/index');
+
+models.sequelize.sync({ force: forseSync })
+    .then(() => {
+        console.info('Connected to Database!');
+    })
+    .catch(err => console.info('Error in connect to Database!')); 

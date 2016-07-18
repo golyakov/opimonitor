@@ -1,0 +1,32 @@
+{
+  "development": {
+    "database": "",
+    "username": "opimonitor",
+    "password": "opimonitor",
+    "dialect": "sqlite",
+    "storage": "store/database.db",
+    "period": "1",
+    "saveInDb": "true",
+    "thingSpeakApiKey": ""
+  },
+  "test": {
+    "database": "",
+    "username": "opimonitor",
+    "password": "opimonitor",
+    "dialect": "sqlite",
+    "storage": "store/database.db",
+    "period": "1",
+    "saveInDb": "true",
+    "thingSpeakApiKey": ""
+  },
+  "production": {
+    "database": "",
+    "username": "opimonitor",
+    "password": "opimonitor",
+    "dialect": "sqlite",
+    "storage": "store/database.db",
+    "period": "1",
+    "saveInDb": "true",
+    "thingSpeakApiKey": ""
+  }
+}
