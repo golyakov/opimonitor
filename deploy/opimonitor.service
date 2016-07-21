@@ -1,0 +1,21 @@
+[Unit]
+Description=OPI Monitor
+After=network.target
+
+[Service]
+WorkingDirectory=/home/orangepi/apps/opimonitor
+ExecStart=/home/orangepi/.nvm/versions/node/<INSTALLED NODE VERSION>/bin/node bin/www
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=opimonitor
+User=orangepi
+Group=orangepi
+Environment=NODE_ENV=prouction
+Environment=THINGSPEAK_API_KEY=<YOUR CHANNEL API KEY>
+#Environment=PERIOD=1
+#Environment=SAVE_IN_DB=true
+
+[Install]
+WantedBy=multi-user.target
